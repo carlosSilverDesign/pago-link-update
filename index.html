@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Deuda y Refinanciamiento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header-zone">
+      <div class="header-left">
+        <h1>Módulo de Descuentos por Campaña</h1>
+        <p>Lista a estudiantes con deudas de periodos pasados o actuales para campañas inter ciclo e intra ciclo</p>
+      </div>
+    </header>
+
+    <!-- ===== CENTERED LAYOUT ===== -->
+    <div class="centered-layout">
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <div class="search-input-wrapper">
+          <span class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M17.5 17.5L13.8833 13.8833" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <input type="text" placeholder="Busca por código de alumno, DNI o nombre completo" class="search-input">
+        </div>
+        <button class="search-btn">Buscar</button>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filter-bar">
+    
+    <div class="custom-select" id="select-institucion">
+        <div class="select-trigger">
+            <div class="select-text">
+                <span class="select-label">INSTITUCIÓN</span>
+                <span class="select-value">U. Wiener</span>
+            </div>
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="select-dropdown">
+            <div class="select-option selected" data-value="WIENER">U. Wiener</div>
+            <div class="select-option" data-value="CARRION">I. Carrión</div>
+        </div>
+    </div>
+
+    <div class="custom-select" id="select-grado">
+        <div class="select-trigger">
+            <div class="select-text">
+                <span class="select-label">GRADO</span>
+                <span class="select-value">Pregrado</span>
+            </div>
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="select-dropdown">
+            <div class="select-option selected" data-value="PREGRADO">Pregrado</div>
+            <div class="select-option" data-value="POSTGRADO">Postgrado</div>
+        </div>
+    </div>
+
+    <div class="custom-select" id="select-modalidad">
+        <div class="select-trigger">
+            <div class="select-text">
+                <span class="select-label">MODALIDAD</span>
+                <span class="select-value">Presencial</span>
+            </div>
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="select-dropdown">
+            <div class="select-option selected" data-value="PRESENCIAL">Presencial</div>
+            <div class="select-option" data-value="SEMIPRESENCIAL">Semipresencial</div>
+        </div>
+    </div>
+
+    <div class="custom-select" id="select-carrera">
+        <div class="select-trigger">
+            <div class="select-text">
+                <span class="select-label">CARRERA</span>
+                <span class="select-value">Elige una carrera</span>
+            </div>
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="select-dropdown">
+            <div class="select-option selected" data-value="PSICOLOGÍA">PSICOLOGÍA</div>
+            <div class="select-option" data-value="INGENIERÍA DE SISTEMAS">INGENIERÍA DE SISTEMAS</div>
+            <div class="select-option" data-value="MEDICINA HUMANA">MEDICINA HUMANA</div>
+            <div class="select-option" data-value="DERECHO Y CIENCIA POLÍTICA">DERECHO Y CIENCIA POLÍTICA</div>
+        </div>
+    </div>
+
+    <div class="custom-select" style="max-width: 120px;" id="select-periodo">
+        <div class="select-trigger">
+            <div class="select-text">
+                <span class="select-label">PERIODO</span>
+                <span class="select-value">2025-1</span>
+            </div>
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="select-dropdown">
+            <div class="select-option selected" data-value="2025-1">2025-1</div>
+            <div class="select-option" data-value="2025-2">2025-2</div>
+            <div class="select-option" data-value="2026-1">2026-1</div>
+            <div class="select-option" data-value="2026-2">2026-2</div>
+        </div>
+    </div>
+
+</div>
+
+      <!-- Tabla -->
+      <div class="table-container">
+        <table class="debt-table">
+          <thead>
+            <tr>
+              <th>Alumno</th>
+              <th>Nombre</th>
+              <th>ID</th>
+              <th>Carrera</th>
+              <th>Modalidad</th>
+              <th>Periodo</th>
+              <th>Total</th>
+              <th>Pendiente</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2020101516</td>
+              <td>Juan Pérez</td>
+              <td>1570</td>
+              <td>Psicología</td>
+              <td>Presencial</td>
+              <td>2025-1</td>
+              <td>S/ 5000</td>
+              <td>S/ 3000</td>
+              <td style="justify-content: center;">
+                <button class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#0F848F">
+                    <path
+                      d="M595.58-384.42q47.5-47.5 47.5-115.58t-47.5-115.58q-47.5-47.5-115.58-47.5t-115.58 47.5q-47.5 47.5-47.5 115.58t47.5 115.58q47.5 47.5 115.58 47.5t115.58-47.5ZM403.5-423.5Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM248.96-287.39q-104.73-67.38-167.19-177.3-5-8.62-7.31-17.35-2.3-8.73-2.3-17.96t2.3-17.96q2.31-8.73 7.31-17.35 62.46-109.92 167.19-177.3Q353.69-780 480-780q126.31 0 231.04 67.39 104.73 67.38 167.19 177.3 5 8.62 7.31 17.35 2.3 8.73 2.3 17.96t-2.3 17.96q-2.31 8.73-7.31 17.35-62.46 109.92-167.19 177.3Q606.31-220 480-220q-126.31 0-231.04-67.39Z" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2023101517</td>
+              <td>María López</td>
+              <td>1644</td>
+              <td>Medicina Humana</td>
+              <td>Presencial</td>
+              <td>2025-1</td>
+              <td>S/ 6000</td>
+              <td>S/ 4500</td>
+              <td style="justify-content: center;">
+                <button class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#0F848F">
+                    <path
+                      d="M595.58-384.42q47.5-47.5 47.5-115.58t-47.5-115.58q-47.5-47.5-115.58-47.5t-115.58 47.5q-47.5 47.5-47.5 115.58t47.5 115.58q47.5 47.5 115.58 47.5t115.58-47.5ZM403.5-423.5Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM248.96-287.39q-104.73-67.38-167.19-177.3-5-8.62-7.31-17.35-2.3-8.73-2.3-17.96t2.3-17.96q2.31-8.73 7.31-17.35 62.46-109.92 167.19-177.3Q353.69-780 480-780q126.31 0 231.04 67.39 104.73 67.38 167.19 177.3 5 8.62 7.31 17.35 2.3 8.73 2.3 17.96t-2.3 17.96q-2.31 8.73-7.31 17.35-62.46 109.92-167.19 177.3Q606.31-220 480-220q-126.31 0-231.04-67.39Z" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2024200254</td>
+              <td>Rosa Castillo</td>
+              <td>2115</td>
+              <td>Derecho y Ciencia Política</td>
+              <td>Semipresencial</td>
+              <td>2025-1</td>
+              <td>S/ 2000</td>
+              <td>S/ 1500</td>
+              <td style="justify-content: center;">
+                <button class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#0F848F">
+                    <path
+                      d="M595.58-384.42q47.5-47.5 47.5-115.58t-47.5-115.58q-47.5-47.5-115.58-47.5t-115.58 47.5q-47.5 47.5-47.5 115.58t47.5 115.58q47.5 47.5 115.58 47.5t115.58-47.5ZM403.5-423.5Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM248.96-287.39q-104.73-67.38-167.19-177.3-5-8.62-7.31-17.35-2.3-8.73-2.3-17.96t2.3-17.96q2.31-8.73 7.31-17.35 62.46-109.92 167.19-177.3Q353.69-780 480-780q126.31 0 231.04 67.39 104.73 67.38 167.19 177.3 5 8.62 7.31 17.35 2.3 8.73 2.3 17.96t-2.3 17.96q-2.31 8.73-7.31 17.35-62.46 109.92-167.19 177.3Q606.31-220 480-220q-126.31 0-231.04-67.39Z" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2025201999</td>
+              <td>Luis Sánchez</td>
+              <td>2120</td>
+              <td>Ingeniería de Sistemas</td>
+              <td>Semipresencial</td>
+              <td>2025-1</td>
+              <td>S/ 3000</td>
+              <td>S/ 1000</td>
+              <td style="justify-content: center;">
+                <button class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#0F848F">
+                    <path
+                      d="M595.58-384.42q47.5-47.5 47.5-115.58t-47.5-115.58q-47.5-47.5-115.58-47.5t-115.58 47.5q-47.5 47.5-47.5 115.58t47.5 115.58q47.5 47.5 115.58 47.5t115.58-47.5ZM403.5-423.5Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM248.96-287.39q-104.73-67.38-167.19-177.3-5-8.62-7.31-17.35-2.3-8.73-2.3-17.96t2.3-17.96q2.31-8.73 7.31-17.35 62.46-109.92 167.19-177.3Q353.69-780 480-780q126.31 0 231.04 67.39 104.73 67.38 167.19 177.3 5 8.62 7.31 17.35 2.3 8.73 2.3 17.96t-2.3 17.96q-2.31 8.73-7.31 17.35-62.46 109.92-167.19 177.3Q606.31-220 480-220q-126.31 0-231.04-67.39Z" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Paginación -->
+      <div class="pagination">
+        <button class="pagination-btn">&laquo;</button>
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">3</button>
+        <button class="pagination-btn">&raquo;</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <!-- <footer class="fixed-footer">
+    <div class="footer-content">
+      <button class="btn-secondary">Regresar</button>
+      <button class="btn-primary">Aplicar Descuentos</button>
+    </div>
+  </footer> -->
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
