@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestión de Deuda y Refinanciamiento</title>
+  <title>Descuentos por Campaña</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,7 +20,7 @@
     <header class="header-zone">
       <div class="header-left">
         <h1>Módulo de Descuentos por Campaña</h1>
-        <p>Lista a estudiantes con deudas de periodos pasados o actuales para campañas inter ciclo e intra ciclo</p>
+        <p>Lista a estudiantes con deudas de periodos pasados o actuales para campañas interciclo e intraciclo</p>
       </div>
     </header>
 
@@ -46,82 +46,97 @@
 
       <!-- Filtros -->
       <div class="filter-bar">
-    
-    <div class="custom-select" id="select-institucion">
-        <div class="select-trigger">
+
+        <div class="custom-select" id="select-institucion">
+          <div class="select-trigger">
             <div class="select-text">
-                <span class="select-label">INSTITUCIÓN</span>
-                <span class="select-value">U. Wiener</span>
+              <span class="select-label">INSTITUCIÓN</span>
+              <span class="select-value">U. Wiener</span>
             </div>
-            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="select-dropdown">
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="select-dropdown">
             <div class="select-option selected" data-value="WIENER">U. Wiener</div>
             <div class="select-option" data-value="CARRION">I. Carrión</div>
+          </div>
         </div>
-    </div>
 
-    <div class="custom-select" id="select-grado">
-        <div class="select-trigger">
+        <div class="custom-select" id="select-grado">
+          <div class="select-trigger">
             <div class="select-text">
-                <span class="select-label">GRADO</span>
-                <span class="select-value">Pregrado</span>
+              <span class="select-label">GRADO</span>
+              <span class="select-value">Pregrado</span>
             </div>
-            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="select-dropdown">
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="select-dropdown">
             <div class="select-option selected" data-value="PREGRADO">Pregrado</div>
             <div class="select-option" data-value="POSTGRADO">Postgrado</div>
+          </div>
         </div>
-    </div>
 
-    <div class="custom-select" id="select-modalidad">
-        <div class="select-trigger">
+        <div class="custom-select" id="select-modalidad">
+          <div class="select-trigger">
             <div class="select-text">
-                <span class="select-label">MODALIDAD</span>
-                <span class="select-value">Presencial</span>
+              <span class="select-label">MODALIDAD</span>
+              <span class="select-value">Presencial</span>
             </div>
-            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="select-dropdown">
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="select-dropdown">
             <div class="select-option selected" data-value="PRESENCIAL">Presencial</div>
             <div class="select-option" data-value="SEMIPRESENCIAL">Semipresencial</div>
+          </div>
         </div>
-    </div>
 
-    <div class="custom-select" id="select-carrera">
-        <div class="select-trigger">
+        <div class="custom-select" id="select-carrera">
+          <div class="select-trigger">
             <div class="select-text">
-                <span class="select-label">CARRERA</span>
-                <span class="select-value">Elige una carrera</span>
+              <span class="select-label">CARRERA</span>
+              <span class="select-value">Elige una carrera</span>
             </div>
-            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="select-dropdown">
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="select-dropdown">
             <div class="select-option selected" data-value="PSICOLOGÍA">PSICOLOGÍA</div>
             <div class="select-option" data-value="INGENIERÍA DE SISTEMAS">INGENIERÍA DE SISTEMAS</div>
             <div class="select-option" data-value="MEDICINA HUMANA">MEDICINA HUMANA</div>
             <div class="select-option" data-value="DERECHO Y CIENCIA POLÍTICA">DERECHO Y CIENCIA POLÍTICA</div>
+          </div>
         </div>
-    </div>
 
-    <div class="custom-select" style="max-width: 120px;" id="select-periodo">
-        <div class="select-trigger">
+        <div class="custom-select" style="max-width: 120px;" id="select-periodo">
+          <div class="select-trigger">
             <div class="select-text">
-                <span class="select-label">PERIODO</span>
-                <span class="select-value">2025-1</span>
+              <span class="select-label">PERIODO</span>
+              <span class="select-value">2025-1</span>
             </div>
-            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
-        <div class="select-dropdown">
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="select-dropdown">
             <div class="select-option selected" data-value="2025-1">2025-1</div>
             <div class="select-option" data-value="2025-2">2025-2</div>
             <div class="select-option" data-value="2026-1">2026-1</div>
             <div class="select-option" data-value="2026-2">2026-2</div>
+          </div>
         </div>
-    </div>
 
-</div>
+      </div>
 
       <!-- Tabla -->
       <div class="table-container">
