@@ -42,4 +42,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 4. Custom Datepicker Logic
+  const datepicker = document.getElementById('datepicker-solicitud');
+  if (datepicker) {
+    const dateTrigger = datepicker.querySelector('.datepicker-trigger');
+    
+    dateTrigger.addEventListener('click', (e) => {
+      // Cierra otros selects primero
+      customSelects.forEach(s => s.classList.remove('open'));
+      datepicker.classList.toggle('open');
+      e.stopPropagation();
+    });
+
+    const days = datepicker.querySelectorAll('.day:not(.prev-month):not(.next-month)');
+    days.forEach(day => {
+      day.addEventListener('click', (e) => {
+        datepicker.querySelectorAll('.day').forEach(d => d.classList.remove('selected'));
+        day.classList.add('selected');
+        // Add default background logic or rely on CSS. Since inline style was added in HTML, we will update it or class
+        // In the HTML we added inline style background-color to the selected one, better to remove inline style on others.
+        datepicker.querySelectorAll('.day').forEach(d => {
+          if (d.style.backgroundColor) d.style.backgroundColor = '';
+        });
+        day.style.backgroundColor = '#1A73E8'; // To match the image blue
+        
+        datepicker.querySelector('.datepicker-value').textContent = day.textContent.padStart(2, '0') + '/04/2026';
+        datepicker.classList.remove('open');
+        e.stopPropagation();
+      });
+    });
+
+    // Prevent closing when clicking inside the dropdown
+    datepicker.querySelector('.datepicker-dropdown').addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    document.addEventListener('click', () => {
+      datepicker.classList.remove('open');
+    });
+  }
+
 });

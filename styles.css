@@ -407,7 +407,6 @@ td .btn-icon {
   z-index: 50;
   overflow: hidden;
 
-  /* Animación de aparición (CSS Puro) */
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
@@ -431,13 +430,397 @@ td .btn-icon {
 
 .select-option:hover {
   background-color: #F4F5F7;
-  /* Color de hover */
 }
 
 /* Opción seleccionada actualmente */
 .select-option.selected {
   background-color: #E6F3F1;
-  /* Un fondo sutil verde para coincidir con tu focus */
   color: #1B8B7E;
   font-weight: 600;
+}
+
+/* ========================================= */
+/* ESTILOS DE VISTA DETALLE SOLICITUD */
+/* ========================================= */
+.detail-page-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 24px 100px;
+}
+
+.student-info-card {
+  background-color: #ffffff;
+  border: 1px solid #DFE1E6;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.student-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #DFE1E6;
+}
+
+.student-avatar {
+  width: 56px;
+  height: 56px;
+  background-color: #E6F3F1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.student-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #172B4D;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.student-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1B8B7E;
+  background-color: #E6F3F1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.student-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 16px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-item .detail-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6B778C;
+  text-transform: uppercase;
+}
+
+.detail-item .detail-value {
+  font-size: 14px;
+  color: #172B4D;
+  font-weight: 500;
+}
+
+/* Form Filters Section */
+.form-filters-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.filter-row {
+  display: flex;
+  gap: 16px;
+}
+
+.filter-row.align-center {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-row.meta-row {
+  margin-top: 8px;
+  gap: 32px;
+}
+
+/* Select Spaced Modifiers */
+.select-spaced .select-label {
+  text-transform: none;
+  font-size: 13px;
+  color: #5E6C84;
+  margin-bottom: 6px;
+}
+
+.select-spaced .select-trigger {
+  padding: 8px 12px;
+}
+
+.select-lg {
+  flex: 2;
+}
+
+/* Info Item */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-label {
+  font-size: 15px;
+  color: #5E6C84;
+}
+
+.info-value {
+  font-size: 20px;
+  font-weight: 500;
+  color: #166A74;
+}
+
+/* Date Input Wrapper */
+.date-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.date-label {
+  font-size: 13px;
+  color: #5E6C84;
+}
+
+/* Custom Datepicker */
+.custom-datepicker {
+  position: relative;
+  user-select: none;
+}
+
+.datepicker-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #DFE1E6;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  cursor: pointer;
+  min-width: 160px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.datepicker-trigger:hover {
+  border-color: #B3BAC5;
+}
+
+.custom-datepicker.open .datepicker-trigger {
+  border-color: #1B8B7E;
+}
+
+.datepicker-value {
+  font-size: 14px;
+  color: #172B4D;
+}
+
+.datepicker-icon {
+  margin-left: 8px;
+  color: #6B778C;
+}
+
+.datepicker-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  width: 280px;
+  background-color: #ffffff;
+  border: 1px solid #DFE1E6;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 60;
+  padding: 16px;
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.custom-datepicker.open .datepicker-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.datepicker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.datepicker-month-year {
+  font-weight: 600;
+  font-size: 14px;
+  color: #172B4D;
+}
+
+.datepicker-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.nav-btn:hover {
+  background-color: #F4F5F7;
+}
+
+.calendar-days-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6B778C;
+  margin-bottom: 8px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  text-align: center;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  font-size: 13px;
+  color: #172B4D;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.day:hover:not(.selected) {
+  background-color: #F4F5F7;
+}
+
+.day.prev-month, .day.next-month {
+  color: #B3BAC5;
+}
+
+.day.selected {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.day.today {
+  border: 1px solid #DFE1E6;
+}
+
+.datepicker-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #DFE1E6;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.btn-text:hover {
+  background-color: #E6F3F1;
+}
+
+/* Table Section */
+.obligaciones-section h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #172B4D;
+  margin-bottom: 16px;
+}
+
+.table-scroll-wrapper {
+  border: 1px solid #DFE1E6;
+  border-radius: 8px;
+  background-color: #DFE1E6;
+  overflow: hidden;
+}
+
+/* Filas alternadas (zebra) */
+.debt-table tbody tr:nth-child(odd) td {
+  background-color: #FFFFFF;
+}
+
+.debt-table tbody tr:nth-child(even) td {
+  background-color: #F8F9FA;
+}
+
+.debt-table tbody tr:hover td {
+  background-color: #F0F2F5;
+}
+
+/* Modifier para la tabla detail */
+.debt-table.detail-table {
+  grid-template-columns: 1fr 2.5fr 0.5fr 1fr 1fr 0.8fr 1fr 1fr;
+  border: none;
+  border-radius: 0;
+}
+
+/* Make headers sticky so it looks good when scrolling */
+.debt-table.detail-table th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #E4E8EC;
+  box-shadow: 0 1px 0 #DFE1E6;
+  line-height: 1.3;
+  white-space: normal;
+  display: flex;
+  align-items: center;
+}
+
+/* Footer elements */
+.total-discount-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #172B4D;
+  font-weight: 600;
+}
+
+.total-discount-value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.btn-apply {
+  padding-left: 32px;
+  padding-right: 32px;
 }

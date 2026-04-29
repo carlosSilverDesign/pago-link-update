@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de Solicitud</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="page-wrapper detail-page-wrapper">
+    
+    <!-- Student Info Card -->
+    <div class="student-info-card">
+      <div class="student-header">
+        <div class="student-avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F848F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <div class="student-title">
+          <h2 class="student-name">SURI JIMENEZ, IMER MIJAEL</h2>
+          <span class="student-badge">Estudiante Regular</span>
+        </div>
+      </div>
+      <div class="student-details-grid">
+        <div class="detail-item">
+          <span class="detail-label">Código</span>
+          <span class="detail-value">2024202968</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">DNI</span>
+          <span class="detail-value">75412588</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Programa</span>
+          <span class="detail-value">CONTABILIDAD Y AUDITORÍA</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Modalidad</span>
+          <span class="detail-value">SEMIPRESENCIAL</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Último periodo</span>
+          <span class="detail-value">2025-II</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Beneficio / Convenio</span>
+          <span class="detail-value">Universidad no licenciada</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters/Selects Section -->
+    <div class="form-filters-section">
+      <!-- Row 1 -->
+      <div class="filter-row">
+        <div class="custom-select select-spaced" id="select-area">
+          <div class="select-trigger">
+            <div class="select-text">
+              <span class="select-label">Área solicitud</span>
+              <span class="select-value">Exito Estudiantil</span>
+            </div>
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="select-dropdown">
+            <div class="select-option selected" data-value="EXITO_ESTUDIANTIL">Exito Estudiantil</div>
+            <div class="select-option" data-value="BIENESTAR_UNIVERSITARIO">Bienestar Universitario</div>
+            <div class="select-option" data-value="REGISTROS_ACADEMICOS">Registros Académicos</div>
+          </div>
+        </div>
+
+        <div class="custom-select select-spaced" id="select-tipo-estudiante">
+          <div class="select-trigger">
+            <div class="select-text">
+              <span class="select-label">Tipo Estudiante</span>
+              <span class="select-value">REINGRESO (PA)</span>
+            </div>
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="select-dropdown">
+            <div class="select-option selected" data-value="REINGRESO_PA">REINGRESO (PA)</div>
+            <div class="select-option" data-value="NUEVO_INGRESO">NUEVO INGRESO</div>
+            <div class="select-option" data-value="REGULAR">REGULAR</div>
+          </div>
+        </div>
+
+        <div class="custom-select select-spaced" id="select-tipo-bolsa">
+          <div class="select-trigger">
+            <div class="select-text">
+              <span class="select-label">Tipo Bolsa</span>
+              <span class="select-value">Morosos</span>
+            </div>
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="select-dropdown">
+            <div class="select-option selected" data-value="MOROSOS">Morosos</div>
+            <div class="select-option" data-value="BECA_COMPLETA">Beca Completa</div>
+            <div class="select-option" data-value="MEDIA_BECA">Media Beca</div>
+            <div class="select-option" data-value="CONVENIO">Convenio</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="filter-row">
+        <div class="custom-select select-spaced" id="select-periodo-campana">
+          <div class="select-trigger">
+            <div class="select-text">
+              <span class="select-label">Periodo campaña</span>
+              <span class="select-value">2026-I</span>
+            </div>
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="select-dropdown">
+            <div class="select-option" data-value="2025-I">2025-I</div>
+            <div class="select-option" data-value="2025-II">2025-II</div>
+            <div class="select-option selected" data-value="2026-I">2026-I</div>
+            <div class="select-option" data-value="2026-II">2026-II</div>
+          </div>
+        </div>
+
+        <div class="custom-select select-spaced select-lg" id="select-campana-otorgada">
+          <div class="select-trigger">
+            <div class="select-text">
+              <span class="select-label">Campaña otorgada</span>
+              <span class="select-value">(8) Paga toda tu deuda / no tiene deuda. Te exonero matrícula</span>
+            </div>
+            <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B778C"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </div>
+          <div class="select-dropdown">
+            <div class="select-option" data-value="1">(1) Descuento 20% pronto pago</div>
+            <div class="select-option" data-value="5">(5) Exoneración de moras</div>
+            <div class="select-option selected" data-value="8">(8) Paga toda tu deuda / no tiene deuda. Te exonero matrícula</div>
+            <div class="select-option" data-value="10">(10) Refinanciamiento especial a 6 cuotas</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="filter-row align-center meta-row">
+        <div class="info-item">
+          <span class="info-label">Nro. solicitud</span>
+          <span class="info-value">2026.2534</span>
+        </div>
+        
+        <div class="date-input-wrapper">
+          <span class="date-label">Fecha solicitud</span>
+          <div class="custom-datepicker" id="datepicker-solicitud">
+            <div class="datepicker-trigger">
+              <span class="datepicker-value">28/04/2026</span>
+              <svg class="datepicker-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#172B4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <div class="datepicker-dropdown">
+              <div class="datepicker-header">
+                <span class="datepicker-month-year">abril de 2026</span>
+                <div class="datepicker-nav">
+                  <button class="nav-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#172B4D" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+                  </button>
+                  <button class="nav-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#172B4D" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="datepicker-calendar">
+                <div class="calendar-days-header">
+                  <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+                </div>
+                <div class="calendar-grid">
+                  <span class="day prev-month">30</span><span class="day prev-month">31</span>
+                  <span class="day">1</span><span class="day">2</span><span class="day">3</span><span class="day">4</span><span class="day">5</span>
+                  <span class="day">6</span><span class="day">7</span><span class="day">8</span><span class="day">9</span><span class="day">10</span><span class="day">11</span><span class="day">12</span>
+                  <span class="day">13</span><span class="day">14</span><span class="day">15</span><span class="day">16</span><span class="day">17</span><span class="day">18</span><span class="day">19</span>
+                  <span class="day">20</span><span class="day">21</span><span class="day">22</span><span class="day">23</span><span class="day">24</span><span class="day">25</span><span class="day">26</span>
+                  <span class="day">27</span><span class="day selected" style="background-color: #1A73E8;">28</span><span class="day today">29</span><span class="day">30</span>
+                  <span class="day next-month">1</span><span class="day next-month">2</span><span class="day next-month">3</span>
+                  <span class="day next-month">4</span><span class="day next-month">5</span><span class="day next-month">6</span><span class="day next-month">7</span><span class="day next-month">8</span><span class="day next-month">9</span><span class="day next-month">10</span>
+                </div>
+              </div>
+              <div class="datepicker-footer">
+                <button class="btn-text" style="color: #1A73E8;">Borrar</button>
+                <button class="btn-text text-blue" style="color: #1A73E8;">Hoy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="obligaciones-section">
+      <h3>Obligaciones del estudiante</h3>
+      
+      <div class="table-scroll-wrapper">
+        <table class="debt-table detail-table">
+          <thead>
+            <tr>
+              <th>Periodo</th>
+              <th>Concepto</th>
+              <th>Nro</th>
+              <th>Fecha<br>Vencimiento</th>
+              <th>Importe<br>Obligación</th>
+              <th>%<br>Dcto</th>
+              <th>Importe<br>Descuento</th>
+              <th>Importe con<br>descuento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>20241U</td>
+              <td>SEGURO ESTUDIANTIL</td>
+              <td>4</td>
+              <td>02/11/2024</td>
+              <td>S/ 10.00</td>
+              <td>50%</td>
+              <td>S/ 5.00</td>
+              <td>S/ 5.00</td>
+            </tr>
+            <tr>
+              <td>20241U</td>
+              <td>CUOTA - PRE GRADO</td>
+              <td>4</td>
+              <td>15/11/2024</td>
+              <td>S/ 369.00</td>
+              <td>50%</td>
+              <td>S/ 184.50</td>
+              <td>S/ 184.50</td>
+            </tr>
+            <tr>
+              <td>20241U</td>
+              <td>GASTOS ADMINISTRATIVOS POR GESTIÓN DE COBRANZA</td>
+              <td>5</td>
+              <td>15/11/2024</td>
+              <td>S/ 15.00</td>
+              <td>50%</td>
+              <td>S/ 7.50</td>
+              <td>S/ 7.50</td>
+            </tr>
+            <tr>
+              <td>20241U</td>
+              <td>SEGURO ESTUDIANTIL</td>
+              <td>5</td>
+              <td>02/12/2024</td>
+              <td>S/ 10.00</td>
+              <td>50%</td>
+              <td>S/ 5.00</td>
+              <td>S/ 5.00</td>
+            </tr>
+            <tr>
+              <td>20241U</td>
+              <td>CUOTA - PRE GRADO</td>
+              <td>5</td>
+              <td>15/12/2024</td>
+              <td>S/ 369.00</td>
+              <td>50%</td>
+              <td>S/ 184.50</td>
+              <td>S/ 184.50</td>
+            </tr>
+            <tr>
+              <td>20241U</td>
+              <td>GASTOS ADMINISTRATIVOS POR GESTIÓN DE COBRANZA</td>
+              <td>5</td>
+              <td>15/12/2024</td>
+              <td>S/ 15.00</td>
+              <td>50%</td>
+              <td>S/ 7.50</td>
+              <td>S/ 7.50</td>
+            </tr>
+            <tr>
+              <td>20261U</td>
+              <td>REACTUALIZACION DE MATRICULA</td>
+              <td>1</td>
+              <td>09/02/2026</td>
+              <td>S/ 103.00</td>
+              <td>100%</td>
+              <td>S/ 103.00</td>
+              <td>S/ 103.00</td>
+            </tr>
+            <tr>
+              <td>20261U</td>
+              <td>ADECUACION CURRICULAR - PREGRADO</td>
+              <td>1</td>
+              <td>09/02/2026</td>
+              <td>S/ 153.00</td>
+              <td>100%</td>
+              <td>S/ 153.00</td>
+              <td>S/ 0.00</td>
+            </tr>
+            <tr>
+              <td>20261U</td>
+              <td>MATRÍCULA</td>
+              <td>0</td>
+              <td>02/03/2026</td>
+              <td>S/ 350.00</td>
+              <td>100%</td>
+              <td>S/ 350.00</td>
+              <td>S/ 0.00</td>
+            </tr>
+            <tr>
+              <td>20261U</td>
+              <td>CUOTA - PRE GRADO</td>
+              <td>1</td>
+              <td>02/03/2026</td>
+              <td>S/ 805.00</td>
+              <td>0%</td>
+              <td>S/ 0.00</td>
+              <td>S/ 805.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIXED FOOTER -->
+  <footer class="fixed-footer">
+    <div class="footer-content" style="justify-content: flex-end; gap: 24px;">
+      <div class="total-discount-wrapper">
+        <span class="total-discount-label">Total descuento a aplicar:</span>
+        <span class="total-discount-value">S/ 1,000.00</span>
+      </div>
+      <button class="btn-primary btn-apply">Aplicar</button>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
