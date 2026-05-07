@@ -863,3 +863,71 @@ td .btn-icon {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
 }
+
+/* ========================================= */
+/* MODAL */
+/* ========================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 30, 66, 0.54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px 24px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(9, 30, 66, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.modal-image-container {
+  width: 120px;
+  height: 120px;
+  background-color: #E6F3F1;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* El usuario colocará aquí su imagen, ej. usando una etiqueta <img> */
+}
+
+.modal-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #172B4D;
+  margin: 0;
+}
+
+.modal-text {
+  font-size: 14px;
+  color: #5E6C84;
+  margin: 0;
+  line-height: 1.5;
+}
+
+#btn-close-modal {
+  margin-top: 8px;
+  width: 100%;
+}

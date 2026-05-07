@@ -109,4 +109,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 6. Modal Logic for Apply Button
+  const btnApply = document.querySelector('.btn-apply');
+  const successModal = document.getElementById('success-modal');
+  const btnCloseModal = document.getElementById('btn-close-modal');
+
+  if (btnApply && successModal && btnCloseModal) {
+    btnApply.addEventListener('click', () => {
+      successModal.style.display = 'flex';
+    });
+
+    btnCloseModal.addEventListener('click', () => {
+      successModal.style.display = 'none';
+    });
+  }
+
 });
