@@ -124,4 +124,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 7. Skeleton Loader Logic for Detalle.html
+  const skeletonLoader = document.getElementById('skeleton-loader');
+  const actualContent = document.getElementById('actual-content');
+
+  if (skeletonLoader && actualContent) {
+    // Simulamos un tiempo de carga de los datos (e.g. 1.5 segundos)
+    setTimeout(() => {
+      skeletonLoader.style.display = 'none';
+      actualContent.style.display = 'block';
+    }, 1500);
+  }
+
 });

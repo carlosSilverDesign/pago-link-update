@@ -14,7 +14,57 @@
 </head>
 
 <body>
-  <div class="page-wrapper detail-page-wrapper">
+  <!-- SKELETON LOADER -->
+  <div id="skeleton-loader" class="page-wrapper detail-page-wrapper">
+    <div class="student-info-card skeleton-card">
+      <div class="student-header" style="border-bottom: 1px dashed #DFE1E6; padding-bottom: 16px; margin-bottom: 20px;">
+        <div class="skeleton-box skeleton-avatar"></div>
+        <div class="student-title">
+          <div class="skeleton-box skeleton-title-lg"></div>
+          <div class="skeleton-box skeleton-badge"></div>
+        </div>
+      </div>
+      <div class="student-details-grid">
+        <div class="skeleton-box skeleton-detail"></div>
+        <div class="skeleton-box skeleton-detail"></div>
+        <div class="skeleton-box skeleton-detail"></div>
+        <div class="skeleton-box skeleton-detail"></div>
+        <div class="skeleton-box skeleton-detail"></div>
+        <div class="skeleton-box skeleton-detail"></div>
+      </div>
+    </div>
+    
+    <div class="form-filters-section">
+      <div class="filter-row">
+        <div class="skeleton-box skeleton-select"></div>
+        <div class="skeleton-box skeleton-select"></div>
+        <div class="skeleton-box skeleton-select"></div>
+      </div>
+      <div class="filter-row">
+        <div class="skeleton-box skeleton-select"></div>
+        <div class="skeleton-box skeleton-select select-lg"></div>
+      </div>
+      <div class="filter-row align-center meta-row">
+        <div class="skeleton-box skeleton-info"></div>
+        <div class="skeleton-box skeleton-date"></div>
+      </div>
+    </div>
+
+    <div class="obligaciones-section">
+      <div class="skeleton-box skeleton-h3"></div>
+      <div class="table-scroll-wrapper skeleton-table">
+        <div class="skeleton-box skeleton-tr"></div>
+        <div class="skeleton-box skeleton-tr"></div>
+        <div class="skeleton-box skeleton-tr"></div>
+        <div class="skeleton-box skeleton-tr"></div>
+        <div class="skeleton-box skeleton-tr"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENIDO REAL -->
+  <div id="actual-content" style="display: none;">
+    <div class="page-wrapper detail-page-wrapper">
     
     <!-- Student Info Card -->
     <div class="student-info-card">
@@ -347,6 +397,7 @@
       <button class="btn-primary btn-apply">Aplicar</button>
     </div>
   </footer>
+  </div>
 
   <!-- MODAL DE ÉXITO -->
   <div class="modal-overlay" id="success-modal" style="display: none;">
