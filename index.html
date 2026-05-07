@@ -138,8 +138,14 @@
 
       </div>
 
+      <!-- Loader -->
+      <div class="loader-container" id="search-loader" style="display: none;">
+        <div class="spinner"></div>
+        <p>Cargando datos...</p>
+      </div>
+
       <!-- Tabla -->
-      <div class="table-container">
+      <div class="table-container" id="data-table" style="display: none;">
         <table class="debt-table">
           <thead>
             <tr>
@@ -236,7 +242,7 @@
       </div>
 
       <!-- Paginación -->
-      <div class="pagination">
+      <div class="pagination" id="data-pagination" style="display: none;">
         <button class="pagination-btn">&laquo;</button>
         <button class="pagination-btn active">1</button>
         <button class="pagination-btn">2</button>

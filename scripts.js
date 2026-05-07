@@ -82,4 +82,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 5. Loader Logic for Search
+  const searchBtn = document.querySelector('.search-btn');
+  const searchLoader = document.getElementById('search-loader');
+  const dataTable = document.getElementById('data-table');
+  const dataPagination = document.getElementById('data-pagination');
+
+  if (searchBtn && searchLoader && dataTable) {
+    searchBtn.addEventListener('click', () => {
+      // Hide table and pagination initially on click
+      dataTable.style.display = 'none';
+      if (dataPagination) dataPagination.style.display = 'none';
+      
+      // Show loader
+      searchLoader.style.display = 'flex';
+
+      // Simulate a network request or data loading
+      setTimeout(() => {
+        // Hide loader
+        searchLoader.style.display = 'none';
+        
+        // Show table and pagination
+        dataTable.style.display = 'block';
+        if (dataPagination) dataPagination.style.display = 'flex';
+      }, 1500); // 1.5s delay
+    });
+  }
+
 });
